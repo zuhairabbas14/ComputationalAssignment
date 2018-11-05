@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9ecf2">
+
+    <LinearLayout
+        android:id="@+id/checkBoxLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="41dp">
+
+        <CheckBox
+            android:id="@+id/checkBoxEul"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:text="Euler"
+            android:textColor="@color/colorAccent" />
+
+        <CheckBox
+            android:id="@+id/checkBoxImp"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/checkBoxEul"
+            android:text="Imp Euler"
+            android:textColor="@color/colorAccent" />
+
+        <CheckBox
+            android:id="@+id/checkBoxRunge"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/checkBoxImp"
+            android:text="Runge Kutta"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/refresh"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_toRightOf="@+id/checkBoxRunge"
+            android:background="#f9ecf2"
+            android:drawableLeft="@drawable/refresh"
+            android:onClick="refreshClicked" />
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="106dp" />
+
+    <EditText
+        android:id="@+id/editTextX0"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/lineChart"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="X0"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextY0"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/lineChart"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="45dp"
+        android:ems="10"
+        android:hint="Y0"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextX"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editTextX0"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="X"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextH"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editTextY0"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:hint="N"
+        android:inputType="textPersonName" />
+
+
+</RelativeLayout>
